@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0340100017C12AE300581FC5 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 03400FFF17C12AE300581FC5 /* AudioPlayer.m */; };
 		0395317917BFD2230058859B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395317817BFD2230058859B /* UIKit.framework */; };
 		0395317B17BFD2230058859B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395317A17BFD2230058859B /* Foundation.framework */; };
 		0395317D17BFD2230058859B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395317C17BFD2230058859B /* CoreGraphics.framework */; };
@@ -19,9 +20,26 @@
 		0395319217BFD2230058859B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0395319117BFD2230058859B /* ViewController.m */; };
 		0395319517BFD2230058859B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395319317BFD2230058859B /* ViewController_iPhone.xib */; };
 		0395319817BFD2230058859B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0395319617BFD2230058859B /* ViewController_iPad.xib */; };
+		039531B017BFD2A70058859B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039531AF17BFD2A70058859B /* AVFoundation.framework */; };
+		039531B217BFD2B10058859B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 039531B117BFD2B10058859B /* libz.dylib */; };
+		039531B417BFD2BF0058859B /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 039531B317BFD2BF0058859B /* libbz2.1.0.dylib */; };
+		039531B617BFD2CF0058859B /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 039531B517BFD2CF0058859B /* libiconv.2.4.0.dylib */; };
+		039531B817BFD2DC0058859B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039531B717BFD2DC0058859B /* AudioToolbox.framework */; };
+		039531BC17BFD4B00058859B /* AudioPacketQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 039531BB17BFD4B00058859B /* AudioPacketQueue.m */; };
+		039531BF17BFDC910058859B /* AudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 039531BE17BFDC910058859B /* AudioUtilities.m */; };
+		0395324E17C06C8A0058859B /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324617C06C8A0058859B /* libavcodec.a */; };
+		0395324F17C06C8A0058859B /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324717C06C8A0058859B /* libavdevice.a */; };
+		0395325017C06C8A0058859B /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324817C06C8A0058859B /* libavfilter.a */; };
+		0395325117C06C8A0058859B /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324917C06C8A0058859B /* libavformat.a */; };
+		0395325217C06C8A0058859B /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324A17C06C8A0058859B /* libavutil.a */; };
+		0395325317C06C8A0058859B /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324B17C06C8A0058859B /* libpostproc.a */; };
+		0395325417C06C8A0058859B /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324C17C06C8A0058859B /* libswresample.a */; };
+		0395325517C06C8A0058859B /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395324D17C06C8A0058859B /* libswscale.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03400FFE17C12AE300581FC5 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		03400FFF17C12AE300581FC5 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		0395317517BFD2230058859B /* MMSwithFFmpeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMSwithFFmpeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0395317817BFD2230058859B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0395317A17BFD2230058859B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +57,23 @@
 		0395319117BFD2230058859B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0395319417BFD2230058859B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		0395319717BFD2230058859B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		039531AF17BFD2A70058859B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		039531B117BFD2B10058859B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		039531B317BFD2BF0058859B /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.dylib; path = usr/lib/libbz2.1.0.dylib; sourceTree = SDKROOT; };
+		039531B517BFD2CF0058859B /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = usr/lib/libiconv.2.4.0.dylib; sourceTree = SDKROOT; };
+		039531B717BFD2DC0058859B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		039531BA17BFD4B00058859B /* AudioPacketQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPacketQueue.h; sourceTree = "<group>"; };
+		039531BB17BFD4B00058859B /* AudioPacketQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPacketQueue.m; sourceTree = "<group>"; };
+		039531BD17BFDC910058859B /* AudioUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUtilities.h; sourceTree = "<group>"; };
+		039531BE17BFDC910058859B /* AudioUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUtilities.m; sourceTree = "<group>"; };
+		0395324617C06C8A0058859B /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ffmpeg/compiled/i386/lib/libavcodec.a; sourceTree = "<group>"; };
+		0395324717C06C8A0058859B /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ffmpeg/compiled/i386/lib/libavdevice.a; sourceTree = "<group>"; };
+		0395324817C06C8A0058859B /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ffmpeg/compiled/i386/lib/libavfilter.a; sourceTree = "<group>"; };
+		0395324917C06C8A0058859B /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ffmpeg/compiled/i386/lib/libavformat.a; sourceTree = "<group>"; };
+		0395324A17C06C8A0058859B /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ffmpeg/compiled/i386/lib/libavutil.a; sourceTree = "<group>"; };
+		0395324B17C06C8A0058859B /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = ffmpeg/compiled/i386/lib/libpostproc.a; sourceTree = "<group>"; };
+		0395324C17C06C8A0058859B /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ffmpeg/compiled/i386/lib/libswresample.a; sourceTree = "<group>"; };
+		0395324D17C06C8A0058859B /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ffmpeg/compiled/i386/lib/libswscale.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +81,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039531B817BFD2DC0058859B /* AudioToolbox.framework in Frameworks */,
+				039531B617BFD2CF0058859B /* libiconv.2.4.0.dylib in Frameworks */,
+				039531B417BFD2BF0058859B /* libbz2.1.0.dylib in Frameworks */,
+				039531B217BFD2B10058859B /* libz.dylib in Frameworks */,
+				039531B017BFD2A70058859B /* AVFoundation.framework in Frameworks */,
 				0395317917BFD2230058859B /* UIKit.framework in Frameworks */,
 				0395317B17BFD2230058859B /* Foundation.framework in Frameworks */,
 				0395317D17BFD2230058859B /* CoreGraphics.framework in Frameworks */,
+				0395324E17C06C8A0058859B /* libavcodec.a in Frameworks */,
+				0395324F17C06C8A0058859B /* libavdevice.a in Frameworks */,
+				0395325017C06C8A0058859B /* libavfilter.a in Frameworks */,
+				0395325117C06C8A0058859B /* libavformat.a in Frameworks */,
+				0395325217C06C8A0058859B /* libavutil.a in Frameworks */,
+				0395325317C06C8A0058859B /* libpostproc.a in Frameworks */,
+				0395325417C06C8A0058859B /* libswresample.a in Frameworks */,
+				0395325517C06C8A0058859B /* libswscale.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +106,11 @@
 		0395316C17BFD2230058859B = {
 			isa = PBXGroup;
 			children = (
+				039531B717BFD2DC0058859B /* AudioToolbox.framework */,
+				039531B517BFD2CF0058859B /* libiconv.2.4.0.dylib */,
+				039531B317BFD2BF0058859B /* libbz2.1.0.dylib */,
+				039531B117BFD2B10058859B /* libz.dylib */,
+				039531AF17BFD2A70058859B /* AVFoundation.framework */,
 				0395317E17BFD2230058859B /* MMSwithFFmpeg */,
 				0395317717BFD2230058859B /* Frameworks */,
 				0395317617BFD2230058859B /* Products */,
@@ -91,6 +144,8 @@
 				0395319117BFD2230058859B /* ViewController.m */,
 				0395319317BFD2230058859B /* ViewController_iPhone.xib */,
 				0395319617BFD2230058859B /* ViewController_iPad.xib */,
+				0395324517C06C6E0058859B /* ffmpeg */,
+				039531B917BFD3CF0058859B /* Audio */,
 				0395317F17BFD2230058859B /* Supporting Files */,
 			);
 			path = MMSwithFFmpeg;
@@ -108,6 +163,34 @@
 				0395318E17BFD2230058859B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		039531B917BFD3CF0058859B /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				039531BD17BFDC910058859B /* AudioUtilities.h */,
+				039531BE17BFDC910058859B /* AudioUtilities.m */,
+				039531BA17BFD4B00058859B /* AudioPacketQueue.h */,
+				039531BB17BFD4B00058859B /* AudioPacketQueue.m */,
+				03400FFE17C12AE300581FC5 /* AudioPlayer.h */,
+				03400FFF17C12AE300581FC5 /* AudioPlayer.m */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		0395324517C06C6E0058859B /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				0395324617C06C8A0058859B /* libavcodec.a */,
+				0395324717C06C8A0058859B /* libavdevice.a */,
+				0395324817C06C8A0058859B /* libavfilter.a */,
+				0395324917C06C8A0058859B /* libavformat.a */,
+				0395324A17C06C8A0058859B /* libavutil.a */,
+				0395324B17C06C8A0058859B /* libpostproc.a */,
+				0395324C17C06C8A0058859B /* libswresample.a */,
+				0395324D17C06C8A0058859B /* libswscale.a */,
+			);
+			name = ffmpeg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +263,9 @@
 				0395318517BFD2230058859B /* main.m in Sources */,
 				0395318917BFD2230058859B /* AppDelegate.m in Sources */,
 				0395319217BFD2230058859B /* ViewController.m in Sources */,
+				039531BC17BFD4B00058859B /* AudioPacketQueue.m in Sources */,
+				039531BF17BFDC910058859B /* AudioUtilities.m in Sources */,
+				0340100017C12AE300581FC5 /* AudioPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +358,16 @@
 		0395319C17BFD2230058859B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMSwithFFmpeg/MMSwithFFmpeg-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MMSwithFFmpeg/ffmpeg/compiled/i386/include\"";
 				INFOPLIST_FILE = "MMSwithFFmpeg/MMSwithFFmpeg-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MMSwithFFmpeg/ffmpeg/compiled/i386/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -283,9 +376,16 @@
 		0395319D17BFD2230058859B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MMSwithFFmpeg/MMSwithFFmpeg-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MMSwithFFmpeg/ffmpeg/compiled/i386/include\"";
 				INFOPLIST_FILE = "MMSwithFFmpeg/MMSwithFFmpeg-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MMSwithFFmpeg/ffmpeg/compiled/i386/lib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -310,6 +410,7 @@
 				0395319D17BFD2230058859B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
