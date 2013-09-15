@@ -24,9 +24,7 @@ typedef enum {
 {
     AVFormatContext *pFormatCtx;
     AVCodecContext *pAudioCodeCtx;
-    AVPacket packet;
     
-    double audioClock;
     int    audioStream;
     
     AudioPlayer *aPlayer;
