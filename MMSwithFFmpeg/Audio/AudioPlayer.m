@@ -114,7 +114,7 @@ void HandleOutputBuffer(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef in
         
         
         if (audioFormat.mFormatID != -1) {
-#if DECODE_AUDIO_BY_FFMPEG == 1
+
             audioFormat.mFormatID = kAudioFormatLinearPCM;
             audioFormat.mFormatFlags = kAudioFormatFlagsCanonical;
             audioFormat.mSampleRate = pAudioCodecCtx->sample_rate;
@@ -185,53 +185,7 @@ void HandleOutputBuffer(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef in
                     return nil;
                 }
             }
-#else
-            if(audioFormat.mFormatID == kAudioFormatMPEG4AAC)
-            {
-                audioFormat.mBytesPerPacket = 0;
-                audioFormat.mFramesPerPacket = pAudioCodecCtx->frame_size;
-                audioFormat.mBytesPerFrame = 0;
-                audioFormat.mChannelsPerFrame = pAudioCodecCtx->channels;
-                audioFormat.mBitsPerChannel = pAudioCodecCtx->bits_per_coded_sample;
-                audioFormat.mReserved = 0;
-            }
-            else if(audioFormat.mFormatID == kAudioFormatMPEGLayer3)
-            {
-                audioFormat.mBytesPerPacket = 0;
-                audioFormat.mFramesPerPacket = pAudioCodecCtx->frame_size;
-                audioFormat.mBytesPerFrame = 0;
-                audioFormat.mChannelsPerFrame = pAudioCodecCtx->channels;
-                audioFormat.mBitsPerChannel = pAudioCodecCtx->bits_per_coded_sample;
-                audioFormat.mReserved = 0;
-            }
-            else if(audioFormat.mFormatID == kAudioFormatLinearPCM)
-            {
-                // TODO: The flag should be assigned according different file type
-                // Current setting is used for AV_CODEC_ID_PCM_U8
-                if(pAudioCodecCtx->sample_fmt==AV_SAMPLE_FMT_U8)
-                {
-                    audioFormat.mFormatFlags = kAudioFormatFlagIsPacked;
-                    audioFormat.mSampleRate = pAudioCodecCtx->sample_rate; // 12000
-                    audioFormat.mBitsPerChannel = pAudioCodecCtx->bits_per_coded_sample; //8;//16;
-                    audioFormat.mChannelsPerFrame = 1;//pAudioCodecCtx->channels;
-                    audioFormat.mBytesPerFrame = 1;
-                    audioFormat.mBytesPerPacket = 1;
-                    audioFormat.mFramesPerPacket = 1;
-                    audioFormat.mReserved = 0;
-                }
-                else if(pAudioCodecCtx->sample_fmt==AV_SAMPLE_FMT_S16)
-                {
-                    audioFormat.mFormatFlags = kAudioFormatFlagIsPacked;
-                    audioFormat.mSampleRate = pAudioCodecCtx->sample_rate; // 12000
-                    audioFormat.mBitsPerChannel = pAudioCodecCtx->bits_per_coded_sample; //8;//16;
-                    audioFormat.mChannelsPerFrame = 1;
-                    audioFormat.mBytesPerFrame = 2;
-                    audioFormat.mBytesPerPacket = 2;
-                    audioFormat.mFramesPerPacket = 1;
-                    audioFormat.mReserved = 0;
-                }
-            }
-#endif
+            
             if ((err = AudioQueueNewOutput(&audioFormat, HandleOutputBuffer, (void *)(self), NULL, NULL, 0, &mQueue)) != noErr) {
                 NSLog(@"Error creating audio output queue");
             } else {
@@ -368,7 +322,7 @@ void HandleOutputBuffer(void *aqData, AudioQueueRef inAQ, AudioQueueBufferRef in
         return 0;
     }
     
-    // TODO: remove debug log
+    /// TODO: remove debug log
     NSLog(@"Get 1 from audioPacketQueue: %d", [audioPacketQueue count]);
     // If no data, we put silence audio (PCM format only)
     // If AudioQueue buffer is empty, AudioQueue will stop
